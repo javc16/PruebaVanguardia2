@@ -5,11 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PruebaVanguardia2.Context
+namespace PruebaVanguardiaDos.Context
 {
-    public class ClienteContext : DbContext
+    public class CliContext : DbContext
     {
-        public ClienteContext(DbContextOptions<ClienteContext> options) : base(options)
+        public CliContext(DbContextOptions<CliContext> options) : base(options)
         { }
         public DbSet<Cliente> Cliente { get; set; }
 
@@ -22,7 +22,7 @@ namespace PruebaVanguardia2.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
-            optionBuilder.UseSqlServer(@"Server=DESKTOP-AICR3S2;Database=HelpDesk;User Id=sa;Password=1234");
+            optionBuilder.UseSqlServer(@"Server=DESKTOP-AICR3S2;Database=Cliente;User Id=sa;Password=1234");
         }
     }
 }

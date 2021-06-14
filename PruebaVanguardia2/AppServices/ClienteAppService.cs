@@ -1,10 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PruebaVanguardia2.Context;
 using PruebaVanguardia2.Domain;
 using PruebaVanguardia2.Helpers;
-using PruebaVanguardia2.Models;
 using PruebaVanguardia2.Models.DTO;
-using System;
+using PruebaVanguardiaDos.Context;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,10 +11,10 @@ namespace PruebaVanguardia2.AppServices
 {
     public class ClienteAppService
     {
-        private readonly ClienteContext _context;
+        private readonly CliContext _context;
         private readonly ClienteDomainService _clienteDomainService;
 
-        public ClienteAppService(ClienteContext context, ClienteDomainService clienteDomainService)
+        public ClienteAppService(CliContext context, ClienteDomainService clienteDomainService)
         {
             _context = context;
             _clienteDomainService = clienteDomainService;
