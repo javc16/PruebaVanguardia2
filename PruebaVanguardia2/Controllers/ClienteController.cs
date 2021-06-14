@@ -48,10 +48,11 @@ namespace PruebaVanguardia2.Controllers
             return Ok(await _clienteAppService.Put(item));
         }
 
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Response>> DeleteById(int id)
+        
+        [HttpPut]
+        public async Task<ActionResult<Response>> DeleteById(int id,ClienteDTO item)
         {
-            return Ok(await _clienteAppService.Delete(id));
+            return Ok(await _clienteAppService.Delete(item.Codigo));
         }
     }
 }
